@@ -1,0 +1,276 @@
+
+/* Global */
+*{
+    list-style: none;
+}
+body{
+    box-sizing: border-box;
+    margin: 0;  
+    font-size: 16px;
+    padding: 0;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    /* background: linear-gradient(to right , rgba(0,0,0,0.9),rgba(0,0,0,0.05)),url('../img/bg-netflix.png');
+    background-size: cover; */
+}
+
+/* Header */
+header{
+    background: linear-gradient(to right , rgba(0,0,0,0.9),rgba(0,0,0,0.05)),url('../img/bg-netflix.png');
+    background-size: cover;
+    border-bottom: 8px solid #222;
+    height: 100vh;
+    color: white;
+    
+}
+header div{
+    justify-content: space-between;
+    display: flex;
+    margin: 0px 15px;
+}
+div img{
+    display: inline-block;
+    width: 308px;
+    height: 136px;
+}
+div a.logo{
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    display: inline-block;
+    line-height: 90px;
+}
+div.nav__left{
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px 0px 0px;
+}
+.nav__left .nav__left-signIn select{
+    margin-right: 25px;
+    padding: 5px 9px;
+    line-height: 1.3em;
+    background-color: rgba(0, 0, 0, 0.262);
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    background: transparent;
+    color: white;
+}
+.nav__left .nav__left-signIn a{
+    color: #fff;
+    border-radius: 3px;
+    text-decoration: none;
+    border: 1px;
+    font-size: 1rem;
+    padding: 6px 1rem;
+    background-color: #E50914;
+}
+
+/* Introduce */
+section .intro-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+section .intro-container .intro-text h1{
+    color: #fff;
+    font-size: 4.2rem;
+    text-indent: -2.5rem;
+    margin: 0;
+}
+section .intro-container .intro-text h2{
+    color: #fff;
+    font-size: 2rem;
+    margin: 15px 0 24px;
+    text-indent: 1rem;
+    font-weight: 400;
+}
+section .intro-container .intro-text p , .intro-text2>p{
+    color: #fff;
+    text-indent: 4rem;
+    font-size: 1.3rem;
+}
+section .intro-container .intro-form , .intro-form2{
+    text-indent: -3rem;
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+
+
+}
+section .intro-container .intro-form input , .intro-container2 .intro-form2 input {
+    padding: 23px 10px 23px;
+    display: inline-block;
+    font-weight: bold;
+    outline: none;
+}
+section .intro-container .intro-form button ,.intro-container2 .intro-form2 button{
+    padding: 15px 0;
+    background-color: #E50914;
+    color: #fff;
+    font-size: 2rem;
+    position: relative;
+    outline: none;
+}
+section .intro-container .intro-form .right-arrow , .intro-form2 .right-arrow{
+    position: absolute;
+    top: 25%;
+    right: 3%;
+}
+
+/*=================== Get the app ==================== */
+.app__container , .faq__container {
+    border-bottom: 8px solid #222;
+    background-color: black;
+    padding: 70px 45px;
+    margin: 0;
+}
+.app__container .app__container--item{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 2fr; 
+    justify-content: space-between ;
+    align-items: center;
+}
+.app__container .app__container--item .app__item--left h1{
+    color: white;
+    font-size: 3.125rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem
+}
+.app__container .app__container--item .app__item--left p{
+    font-size: 1.625rem;
+    font-weight: normal;
+    color: #ffffff  ;
+}
+.app__container .app__container--item .app__item--left a{
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.625rem;
+}
+.app__container .app__container--item .app__item--left a:hover{
+    color: rgba(255, 255, 255, 0.77);
+}
+.app__container .app__container--item .app__item--left .right-arrow{
+    position: absolute;
+    top :25%;
+    right: -19%;
+}
+
+.app__container--item .app__item--right img{
+    width: 100%;
+    display: inline-block;
+    width: 465px;
+    height: 320px
+}
+
+/* =============================== FAQ=========================== */
+.faq__container{
+    position: relative;
+}
+.faq__accordion{
+    width: 60%;
+    margin: 0 auto;
+    color: #ffffff;
+    margin-bottom: 5rem;
+    
+}
+
+.faq__container h1{
+    text-align: center;
+    color: #ffffff;
+    font-size: 3rem;
+}
+
+.faq__container .accordion-item>.accordion-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    text-decoration: none;
+
+}
+.accordion-item{
+    background-color: #303030;
+    /* border-radius: 0.4rem; */
+    padding: 1em 2.2em 1em 1.2em;
+    margin-bottom: 0.5rem;
+    font-size: 26px;
+}
+.accordion-link .close{
+    display: none;
+}
+.accordion-item .accordin-answer{
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 650ms;
+}
+.accordion-item:target .accordin-answer{
+    max-height: 20rem;
+}
+
+.accordion-item:target .accordion-link .open{
+    font-size: 26px;
+    width: 1em;
+    height: 1em;
+    display: none;
+}
+.accordion-item:target .accordion-link .close{
+    display: block;
+}
+.accordion-item .accordion-link .open , .close{
+    font-size: 3rem;
+}
+.intro-container2{
+    width: 55%;
+    margin: 0 auto;
+}
+
+
+/*===================== FOOTER (CONTACT US) =====================*/
+footer{
+    padding: 70px 45px 0;
+    position: relative;
+    background-color: #000000;
+}
+footer p{
+    position: absolute;
+    left: 18%;
+    top: 9%;    
+}
+footer p a{
+    margin-top: 50px;
+    text-decoration: none;
+    color: #757575;
+
+}
+.contact__container{
+    width: 65%;
+    margin: 0 188px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.contact__container .contact__item li a{
+    line-height: 35px;
+    color: #757575;
+    text-decoration: none;
+    font-weight: 100;
+    font-family: 'Times New Roman', Times, serif;
+}
+.contact__container .contact__item li:nth-child(4){
+    margin-bottom: 20px;
+}
+.contact__item #languages{
+    margin-bottom: 15px;
+    width: 126px;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 2px;
+    border: 0.5px #757575 solid;
+    color: #757575;
+    background-color: #000000;
+}
